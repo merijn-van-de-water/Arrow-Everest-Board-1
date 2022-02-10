@@ -1,6 +1,7 @@
-#Arrow Everest Board ES = MPF300T_ES-1FCG1152I
+#Hardware     : Arrow Everest Board ES = MPF300T_ES-1FCG1152I
+#MIV Cores    : Core: MIV_RV32IMA_L1_AHB
+#
 #Libero's TCL top level script
-# Core: MIV_RV32IMA_L1_AHB
 #
 #This Tcl file sources other Tcl files to build the design(on which recursive export is run) in a bottom-up fashion
 
@@ -150,7 +151,7 @@ sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:SRAM_INIT_
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:SRAM_INIT_FROM_SPI_DONE}
 sd_mark_pins_unused -sd_name ${sd_name} -pin_names {PF_INIT_MONITOR_0:AUTOCALIB_DONE}
 
-
+update_component_version -component_name {PF_INIT_MONITOR_0} -new_version {2.*} -download_core 
 
 # Add PF_OSC_0 instance
 sd_instantiate_component -sd_name ${sd_name} -component_name {PF_OSC_0} -instance_name {PF_OSC_0}
@@ -206,7 +207,10 @@ sd_connect_pins -sd_name ${sd_name} -pin_names {"MIV_RV32IMA_L1_AHB_0:AHB_MST_MM
 
 # Re-enable auto promotion of pins of type 'pad'
 auto_promote_pad_pins -promote_all 1
+# Re-arrange SmartDesign layout
+sd_reset_layout -sd_name ${sd_name}
 # Save the smartDesign
 save_smartdesign -sd_name ${sd_name}
 # Generate SmartDesign BaseDesign
 generate_component -component_name ${sd_name}
+
