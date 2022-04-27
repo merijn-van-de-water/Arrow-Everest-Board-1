@@ -32,9 +32,7 @@ if {"$die_variant" == ""} then {
 	set die_variant "PS"
 }
 
-append tmp_results RV32
-append project_folder_name MIV_ $tmp_results _ $config _BD_ $die_variant
-#append project_folder_name MIV_ $config _BD
+append project_folder_name MIV_ $config _BD
 append target_board $hw_platform _ $die_variant
 set project_dir "./$project_folder_name"
 append project_name $target_board _ $soft_cpu _ $config _ $sd_reference
