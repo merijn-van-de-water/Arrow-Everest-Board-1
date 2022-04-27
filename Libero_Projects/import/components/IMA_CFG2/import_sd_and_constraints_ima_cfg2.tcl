@@ -5,7 +5,7 @@ puts "\n------------------------------------------------------------------------
 puts "Importing Components..."
 puts "---------------------------------------------------------------------------------------------------------\n"
 
-source ./import/components/IMA_CFG2/top_level_pf_everest_es_rv32ima_cfg2.tcl
+source ./import/components/IMA_CFG2/build_sd_ima_cfg2.tcl
 
 puts "\n---------------------------------------------------------------------------------------------------------"
 puts "Components Imported."

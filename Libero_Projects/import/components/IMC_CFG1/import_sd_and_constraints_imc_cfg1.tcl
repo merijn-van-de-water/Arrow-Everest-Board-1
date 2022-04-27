@@ -1,11 +1,11 @@
-set project_folder_name MIV_CFG2_BD
+set project_folder_name MIV_CFG1_BD
 set project_dir2 "./$project_folder_name"
 
 puts "\n---------------------------------------------------------------------------------------------------------"
 puts "Importing Components..."
 puts "---------------------------------------------------------------------------------------------------------\n"
 
-source ./import/components/IMC_CFG2/top_level_pf_everest_es_rv32imc_cfg2.tcl
+source ./import/components/IMC_CFG1/build_sd_imc_cfg1.tcl
 
 puts "\n---------------------------------------------------------------------------------------------------------"
 puts "Components Imported."
