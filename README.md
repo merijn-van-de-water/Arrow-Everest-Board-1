@@ -27,7 +27,7 @@ The Libero designs include the following features:
 * A soft RISC-V processor.
 * A RISC-V debug block allowing on-target debug using SoftConsole
 * The operating frequency of the design is 50MHz
-* Target memory is SRAM (32kB) / TCM (32kB)
+* Target memory is SRAM/TCM (32kB)
 * User peripherals: 2 Timers, UART, 2 GPIO Inputs and 4 GPIO Outputs (GPIOs use fixed configs for simplicity and better resource utilization)
 
 ## Target Hardware
@@ -48,5 +48,12 @@ The following design tools are required.
 available as a standalone application. Please note, that if Libero SoC is already on your system, you do not need
 the standalone version.
 
+# Software
+
 ## SoftConsole
 [SoftConsole](https://www.microsemi.com/product-directory/design-tools/4879-softconsole) is Microsemi’s free software development environment facilitating the rapid development of bare-metal and RTOS based C/C++ software for Microsemi CPU and SoC based FPGAs. It provides development and debug support for all Microsemi SoC FPGAs and 32-bit soft IP CPUs. SoftConsole can be downloaded.
+
+## Mi-V Soft processor Bare Metal Examples
+A [Firmware](https://github.com/Mi-V-Soft-RISC-V/miv-rv32-bare-metal-examples)
+repository that provides bare metal embedded software example projects built with Microchip's SoftConsole IDE.
+
